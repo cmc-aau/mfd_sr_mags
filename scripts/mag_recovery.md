@@ -6,7 +6,6 @@
 ```
 megahit -t 10 -1 reads/MFDxxxx_R1.fastq.gz -2 reads/MFDxxxx_R2.fastq.gz -o contigs/MFDxxxx --k-list 27,43,71,99,127 -m 0.7 --min-contig-len 1000
 ```
-<br/>
 
 ### Multi-sample coverage profiles
 * To perform [multi-sample](https://www.nature.com/articles/s41592-023-01934-8) metagenomic binning, overlapping samples were determined using [binchicken](https://github.com/AroneyS/binchicken)
@@ -19,9 +18,8 @@ jgi_summarize_bam_contig_depths map/MFDxxxx_MFDyyyy.bam --percentIdentity 97 --o
 * After calculating coverage values, the additional datasets can be appended:
 ```
 cut -f4,5 cov/MFDxxxx_MFDyyyy.tsv > cov/MFDxxxx_MFDyyyy_trunc.tsv
-paste -d "\t"  cov/MFDxxxx_MFDxxxx.tsv cov/MFDxxxx_MFDyyyy_trunc.tsv > cov/MFDxxxx.tsv
+paste -d "\t" cov/MFDxxxx_MFDxxxx.tsv cov/MFDxxxx_MFDyyyy_trunc.tsv > cov/MFDxxxx.tsv
 ```
-<br/>
 
 ### Binning
 * The contigs were binned into MAGs with [MetaBat2](https://bitbucket.org/berkeleylab/metabat)
