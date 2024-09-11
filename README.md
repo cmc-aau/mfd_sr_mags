@@ -2,6 +2,7 @@
 Repository for phylogenetic overview of metagenome assembled genomes (MAGs) recovered during the [Microflora Danica](https://github.com/cmc-aau/mfd_wiki/wiki) (MFD) project.
 
 ## Content overview
+*  [Code examples for short-read MAG recovery](scripts/mag_recovery.md)
 *  [R code for plotting the joint GTDB and MFD MAG tree](scripts/gtdb-tree_mfd-sr.md)
 
 ## Citation
